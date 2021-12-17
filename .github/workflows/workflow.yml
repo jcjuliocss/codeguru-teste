@@ -1,4 +1,4 @@
-name: Python CI with CodeGuru reviwer
+name: Python CI with CodeGuru reviewer
 
 on:
   push:
@@ -29,13 +29,13 @@ jobs:
       with:
         python-version: 2.7
 
-    - name: CodeGuru reviwer
-      uses: aws-actions/codeguru-reviwer@v1.1
+    - name: CodeGuru Reviewer
+      uses: aws-actions/codeguru-reviewer@v1.1
       with:
         build_path: target
-        s3_bucket: codeguru-reviwer-git-cicd
+        s3_bucket: codeguru-reviewer-my-bucket
 
-    - name: Upload review results
+    - name: Upload reviewe results
       if: ${{ github.event_name != 'push' }}
       uses: github/codeql-action/upload-sarif@v1
       with:
