@@ -23,12 +23,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
-    - name: Setup Python 2.7
-      id: setup-python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 2.7
-
     - name: CodeGuru Reviewer
       uses: aws-actions/codeguru-reviewer@v1.1
       with:
