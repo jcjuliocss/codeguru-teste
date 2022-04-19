@@ -41,3 +41,4 @@ jobs:
     - name: CodeGuru Reviewer
       uses: aws-actions/codeguru-reviewer@v1.1
       with:
+        s3_bucket: codeguru-reviewer-teste-bucket
